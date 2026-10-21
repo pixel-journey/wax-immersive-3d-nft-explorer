@@ -2,12 +2,10 @@
 
 > **Trust Label:** `educational-reference`  
 > **Verification:** [VERIFICATION-LOG.md](VERIFICATION-LOG.md)  
-> **Status:** 🔄 Pass 1 — CSS 3D ring layout + pure engine  
+> **Status:** 🔄 Pass 2 — live sample + export + keyboard / reduced-motion  
 > **Parent Catalog:** [wax-ecosystem-blueprint-catalog](https://github.com/pixel-journey/wax-ecosystem-blueprint-catalog)
 
-Educational **immersive NFT showcase** using a pure layout engine and **CSS 3D** transforms. No WebGL dependency in Pass 1.
-
-Not a marketplace, not a claim that every NFT has 3D geometry.
+Educational CSS 3D NFT card ring. Optional AtomicAssets first-page sample. Not a marketplace.
 
 ## Quick start
 
@@ -15,24 +13,14 @@ Not a marketplace, not a claim that every NFT has 3D geometry.
 npm install && npm test && npm run dev
 ```
 
-```ts
-import { demoPixelJourneyScene, layoutRing } from "./src/engines";
-```
-
-## Pass 1 surface
+## Pass 2 surface
 
 | Piece | Role |
 |-------|------|
-| `layoutRing` | rotateY + translateZ per card |
-| `buildShowcaseScene` | Place cards on a ring |
-| `CarouselStage` | Interactive rotate + select |
-| Fixtures | Pixel Journey ring · sparse stage |
-
-## Pass 2 ideas
-
-- Soft-fail AtomicAssets inventory → card list
-- Optional Three.js layer behind a feature flag
-- Keyboard / swipe controls
+| CSS 3D carousel | Rotate, select, keyboard ← → |
+| Reduced motion | Transitions off when preferred |
+| Live inventory | Soft-fail AtomicAssets → cards |
+| Export | Scene JSON + markdown |
 
 ## License
 
