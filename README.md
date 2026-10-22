@@ -2,10 +2,10 @@
 
 > **Trust Label:** `educational-reference`  
 > **Verification:** [VERIFICATION-LOG.md](VERIFICATION-LOG.md)  
-> **Status:** 🔄 Pass 2 — live sample + export + keyboard / reduced-motion  
+> **Status:** 🔄 Pass 3 — flat-list fallback + related links  
 > **Parent Catalog:** [wax-ecosystem-blueprint-catalog](https://github.com/pixel-journey/wax-ecosystem-blueprint-catalog)
 
-Educational CSS 3D NFT card ring. Optional AtomicAssets first-page sample. Not a marketplace.
+Educational CSS 3D NFT card ring with an accessible **flat list** when `prefers-reduced-motion: reduce` (or via manual toggle).
 
 ## Quick start
 
@@ -13,14 +13,15 @@ Educational CSS 3D NFT card ring. Optional AtomicAssets first-page sample. Not a
 npm install && npm test && npm run dev
 ```
 
-## Pass 2 surface
+## Pass 3 surface
 
 | Piece | Role |
 |-------|------|
-| CSS 3D carousel | Rotate, select, keyboard ← → |
-| Reduced motion | Transitions off when preferred |
-| Live inventory | Soft-fail AtomicAssets → cards |
-| Export | Scene JSON + markdown |
+| CSS 3D carousel | Keyboard rotate |
+| Flat list | Reduced-motion / force toggle |
+| Live sample | Soft-fail AtomicAssets |
+| Export | JSON + markdown |
+| Related | Inventory, mutable data, packs |
 
 ## License
 
