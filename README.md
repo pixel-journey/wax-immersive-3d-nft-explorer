@@ -2,10 +2,12 @@
 
 > **Trust Label:** `educational-reference`  
 > **Verification:** [VERIFICATION-LOG.md](VERIFICATION-LOG.md)  
-> **Status:** 🔄 Pass 3 — flat-list fallback + related links  
+> **Status:** ✅ Pass 4 complete  
 > **Parent Catalog:** [wax-ecosystem-blueprint-catalog](https://github.com/pixel-journey/wax-ecosystem-blueprint-catalog)
 
-Educational CSS 3D NFT card ring with an accessible **flat list** when `prefers-reduced-motion: reduce` (or via manual toggle).
+Educational **CSS 3D NFT showcase** with pure layout math, optional AtomicAssets sample, scene export, keyboard controls, and an accessible **flat list** when reduced motion is preferred.
+
+Not a marketplace. WebGL is out of scope for this pass set.
 
 ## Quick start
 
@@ -13,15 +15,19 @@ Educational CSS 3D NFT card ring with an accessible **flat list** when `prefers-
 npm install && npm test && npm run dev
 ```
 
-## Pass 3 surface
+```ts
+import { demoPixelJourneyScene, layoutRing } from "./src/engines";
+```
 
-| Piece | Role |
-|-------|------|
-| CSS 3D carousel | Keyboard rotate |
-| Flat list | Reduced-motion / force toggle |
-| Live sample | Soft-fail AtomicAssets |
+## Surface
+
+| Layer | Features |
+|-------|----------|
+| Engine | Ring orbit / depth transforms |
+| Stage | CSS 3D carousel or flat list |
+| Live | Soft-fail owner inventory sample |
 | Export | JSON + markdown |
-| Related | Inventory, mutable data, packs |
+| A11y | Keyboard, reduced-motion path |
 
 ## License
 
