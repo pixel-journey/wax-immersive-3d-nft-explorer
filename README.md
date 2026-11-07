@@ -32,3 +32,9 @@ import { demoPixelJourneyScene, layoutRing } from "./src/engines";
 ## License
 
 MIT — **Pixel Journey**
+
+## What the mapper actually does
+
+`cardsFromAtomicAssets` is pure. The test maps two rows: a `data.img` of `QmHash` becomes `image`, and a later row with `data.video` becomes `video`. Video is checked first, so a row with both fields would be video. Collection may be a string or `{ collection_name }`. Missing media is `unknown`. `max` stops the list.
+
+It does not fetch. It does not read `schematypes`. A `video` string is whatever the row already contains, not a gateway race. v2 backing is unrelated: this function never sees `tokens_to_back`.
