@@ -3,7 +3,7 @@
 > **Trust Label:** `educational-reference`  
 > **Verification:** [VERIFICATION-LOG.md](VERIFICATION-LOG.md)  
 > **Status:** ✅ Pass 4 complete  
-> **Parent Catalog:** [wax-ecosystem-blueprint-catalog](https://github.com/pixel-journey/wax-ecosystem-blueprint-catalog)
+> **Parent Catalog:** `wax-ecosystem-blueprint-catalog` (private index; not this public course)
 
 Educational **CSS 3D NFT showcase** with pure layout math, optional AtomicAssets sample, scene export, keyboard controls, and an accessible **flat list** when reduced motion is preferred.
 

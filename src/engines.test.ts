@@ -10,9 +10,9 @@ describe("layoutRing", () => {
     const scene = demoPixelJourneyScene();
     const transforms = layoutRing(scene.cards, { radiusPx: scene.radiusPx });
     expect(transforms).toHaveLength(4);
-    expect(transforms[0].rotateY).toBe(0);
-    expect(transforms[1].rotateY).toBe(90);
-    expect(transforms[2].cssTransform).toContain("translateZ");
+    expect(transforms.map((row) => row.rotateY)).toEqual([0, 90, 180, 270]);
+    expect(transforms.map((row) => row.translateZ)).toEqual([260, 260, 260, 260]);
+    expect(transforms[2].cssTransform).toBe("rotateY(180deg) translateZ(260px)");
   });
 
   it("returns empty for no cards", () => {
