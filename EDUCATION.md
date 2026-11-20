@@ -1,7 +1,7 @@
 # Education — four cards, ninety degrees apart
 
 > **Rung:** `npm test` passes. The host applies the CSS string. This file does not touch the DOM and it does not start WebGL.  
-> **The test is the rule.** Reduced motion: [wax-reduced-motion-dashboard](https://github.com/pixel-journey/wax-reduced-motion-dashboard).
+> **The test is the rule.** Reduced motion: [wax-reduced-motion-dashboard](https://github.com/pixel-journey/wax-reduced-motion-dashboard). Flash limits: [seizure-safe animations](https://github.com/pixel-journey/wax-seizure-safe-animations).
 
 Official context: [docs.wax.io](https://docs.wax.io/) (AtomicAssets media is product context only; layout is pure).
 
@@ -42,6 +42,14 @@ Two cards are placed at `0` and `180`. An empty card list is an empty transform 
 
 Default radius when not specified is **280**; the Pixel Journey demo overrides to **260**.
 
+### Attack → test
+
+| Attack | Lab behavior |
+| --- | --- |
+| Claim WebGL from CSS | Pure string transforms only |
+| Fetch media in layout tests | not on pure path |
+| Ignore reduced motion | host must honor [reduced-motion](https://github.com/pixel-journey/wax-reduced-motion-dashboard) |
+
 ---
 
 ## Masterclass
@@ -50,13 +58,14 @@ Default radius when not specified is **280**; the Pixel Journey demo overrides t
 
 1. Claiming WebGL or Three.js from CSS `rotateY`.  
 2. Fetching media inside unit tests of layout.  
-3. Ignoring reduced-motion hosts that should flatten the ring.
+3. Ignoring reduced-motion hosts that should flatten the ring.  
+4. Treating depth 0 as intentional zero depth (lab uses default radius).
 
 ### Exercises
 
-1. Four-card angles? (0,90,180,270.)  
-2. Empty list? (`[]`.)  
-3. Is media loaded by `layoutRing`? (No.)
+1. Four-card angles? (**0, 90, 180, 270**.)  
+2. Empty list? (**`[]`**.)  
+3. Is media loaded by `layoutRing`? (**No**.)
 
 ---
 
@@ -64,3 +73,4 @@ Default radius when not specified is **280**; the Pixel Journey demo overrides t
 
 - WebGL scene graphs
 - Live AtomicAssets as a required dependency of the layout math
+- Medical or WCAG claims from transforms alone
